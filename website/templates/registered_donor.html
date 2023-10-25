@@ -1,0 +1,33 @@
+{% extends 'hospital_dashboard.html' %}
+{% block title %}Registered Donors{% endblock %}
+{% block user %}Registered Donors{% endblock %}
+{% block content %}
+<div class="container">
+    <h2>Registered Donors</h2>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Blood Group</th>
+                <th>Contact</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for i in range(lenh) %}
+            <tr>
+                <td>{{ donors[i][1] }}</td>
+                <td>{{ donors[i][6] }}</td>
+                <td>{{ donors[i][7] }}</td>
+                <td>
+                    {% if not block_values[i] %}
+                   <a href="/accept_donor/{{ donors[i][0]}}/{{ camp_id }}" class="btn btn-success">Accept</a>
+                    <a href="/reject/{{ donors[i][0]}}/{{ camp_id }}" class="btn btn-danger">Reject</a>
+                    {% endif %}
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}

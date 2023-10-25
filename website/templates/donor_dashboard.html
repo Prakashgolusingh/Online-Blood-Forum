@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% block title %}Donor Home Page{% endblock%}
+{% block user %}Donor Dashboard{% endblock %}
+{% block navbar %}
+
+{% include 'donor_navbar.html' %}
+
+<style>
+    .btn-block {
+        width: 100%;
+    }
+</style>
+
+<div class="container text-center mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-5">
+            <div class="btn-group-vertical">
+                <h4>View Camp Details</h4>
+                <br>
+                <a href="/search_camps" class="btn btn-primary btn-block mb-2">Search Camps</a>
+                <a href="/donor_past_camps" class="btn btn-primary btn-block">Past Camps</a>
+            </div>
+        </div>
+        <div class="col-md-5">
+            <div class="btn-group-vertical">
+                <h4>Camp Registrations</h4>
+                <br>
+                <a href="/donor_awaited_camps" class="btn btn-success btn-block mb-2">Awaiting Registrations</a>
+                <a href="/donor_accepted_camps" class="btn btn-success btn-block mb-2">Accepted Registrations</a>
+                <a href="/donor_rejected_camps" class="btn btn-danger btn-block">Rejected Registrations</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

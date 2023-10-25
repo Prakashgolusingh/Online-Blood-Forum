@@ -1,0 +1,32 @@
+{% extends 'admin_dashboard.html' %}
+{% block title %}Registered Donors{% endblock %}
+{% block user %}Admin Dashboard{% endblock %}
+{% block content %}
+  <div class="container">
+    <h2 class="mt-4">List of Registered Donors</h2>
+    <table class="table table-striped mt-4">
+      <thead>
+        <tr>
+          <th scope="col">Name</th>
+          <th scope="col">Email</th>
+          <th scope="col">Blood Group</th>
+          <th scope="col">Contact</th>
+          <th scope="col">Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for donor in donors %}
+          <tr>
+            <td>{{donor[1]}}</td>
+            <td>{{donor[0]}}</td>
+            <td>{{donor[2]}}</td>
+            <td>{{donor[7]}}</td>
+            <td>
+              <a href="/delete_donor/{{ donor[0] }}" class="btn btn-danger">Delete</a>
+            </td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+{% endblock %}

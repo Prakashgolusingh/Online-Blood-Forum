@@ -1,0 +1,76 @@
+{% extends 'base.html' %}
+{% block title %}Admin Home Page{% endblock %}
+{% block user %}Admin Dashboard{% endblock %}
+{% block navbar %}
+<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #FF0000;">
+  <div class="container">
+      <a class="navbar-brand text-white" href="/logout">Logout</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+              <li class="nav-item">
+                  <a class="navbar-brand" aria-current="page" href="/hospital_list">Registered Hospital</a>
+              </li>
+              <li class="nav-item">
+                  <a class="navbar-brand text-white" href="/donor_list">Registered Donor</a>
+              </li>
+              <li class="nav-item">
+                  <a class="navbar-brand text-white" href="/admin_dashboard">Home</a>
+              </li>
+          </ul>
+      </div>
+  </div>
+</nav>
+{% endblock %}
+
+{% block content %}
+<div class="container my-4">
+  <div class="row">
+    <div class="col-md-6 mb-4">
+      <div class="card">
+        <div class="card-header bg-light">Statistics</div>
+        <div class="card-body">
+          <h5 class="card-title">Total Donors</h5>
+          <p class="card-text">{{donor_count[0]}}</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6 mb-4">
+      <div class="card">
+        <div class="card-header bg-light">Manage Hospitals</div>
+        <div class="card-body">
+          <h5 class="card-title">Total Hospitals</h5>
+          <p class="card-text">{{hospital_count[0]}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-6 mb-4">
+      <div class="card">
+        <div class="card-header bg-light">Manage Donors</div>
+        <div class="card-body">
+          <h5 class="card-title">Registered Donors</h5>
+          <p class="card-text">See the list of registered donors.</p>
+          <a href="{{ url_for('view.donorList') }}" class="btn btn-danger">Go &#x2192;</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6 mb-4">
+      <div class="card">
+        <div class="card-header bg-light">Manage Hospitals</div>
+        <div class="card-body">
+          <h5 class="card-title">Registered Hospitals</h5>
+          <p class="card-text">See the list of registered hospitals.</p>
+          <a href="{{ url_for('view.hospitalList') }}" class="btn btn-danger">Go &#x2192;</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

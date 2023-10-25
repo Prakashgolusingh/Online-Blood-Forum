@@ -1,0 +1,48 @@
+<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #FF0000;">
+    <div class="container">
+        <a class="navbar-brand text-warning" href="/admin_login">Admin</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="navbar-brand" aria-current="page" href="/">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="navbar-brand text-warning" href="/donate_blood">Want To Donate Blood</a>
+                </li>
+                <li class="nav-item">
+                    <a class="navbar-brand" href="/">Looking For Blood</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="navbar-brand dropdown-toggle text-warning" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Hospital
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="/hospital_login">Login</a></li>
+                        <li><a class="dropdown-item" href="/hospital_signup">Sign up</a></li>
+                        <li><a class="dropdown-item" href="/create_camp">Create Blood Donation Camp</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="navbar-brand dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Donor
+                    </a>
+                    {% if 'donor_email' in session %}
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="/donor_dashboard">Dashboard</a></li>
+                      <li><a class="dropdown-item" href="/logout">Logout</a></li>
+                      <li><a class="dropdown-item" href="/">Search blood</a></li>
+                    </ul>
+                    {% else %}
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="/donor_login">Login</a></li>
+                      <li><a class="dropdown-item" href="/donor_signup">Sign Up</a></li>
+                    </ul>
+                    {% endif %}
+                </li>
+            </ul>
+        </div>
+    </div>
+  </nav>

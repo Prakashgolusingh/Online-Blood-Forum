@@ -1,0 +1,42 @@
+{% extends 'hospital_dashboard.html' %}
+{% block title %}Update Blood Availability{% endblock %}
+{% block content %}
+<div class="container">
+  <h2 class="mt-4">Edit Blood Availability</h2>
+  <form method="POST">
+    <div class="mb-3">
+      <label for="name" class="form-label">O+</label>
+      <input type="text" class="form-control" id="name" name="O_positive" value="{{ hospital[1] }}">
+    </div>
+    <div class="mb-3">
+      <label for="contact" class="form-label">O-</label>
+      <input type="text" class="form-control" id="contact" name="O_negative" value="{{hospital[2] }}">
+    </div>
+    <div class="mb-3">
+      <label for="address" class="form-label">A+</label>
+      <input type="text" class="form-control" id="address" name="A_positive" value="{{hospital[8]}}">
+    </div>
+    <div class="mb-3">
+        <label for="name" class="form-label">A-</label>
+        <input type="text" class="form-control" id="name" name="A_negative" value="{{ hospital[7] }}">
+      </div>
+      <div class="mb-3">
+        <label for="contact" class="form-label">B+</label>
+        <input type="text" class="form-control" id="contact" name="B_positive" value="{{hospital[6] }}">
+      </div>
+      <div class="mb-3">
+        <label for="address" class="form-label">B-</label>
+        <input type="text" class="form-control" id="address" name="B_negative" value="{{hospital[5]}}">
+      </div>
+      <div class="mb-3">
+        <label for="name" class="form-label">AB+</label>
+        <input type="text" class="form-control" id="name" name="AB_positive" value="{{ hospital[3] }}">
+      </div>
+      <div class="mb-3">
+        <label for="contact" class="form-label">AB-</label>
+        <input type="text" class="form-control" id="contact" name="AB_negative" value="{{hospital[4] }}">
+      </div>
+    <button type="submit" class="btn btn-primary">Update Blood</button>
+  </form>
+</div>
+{% endblock %}

@@ -1,0 +1,24 @@
+{% extends 'hospital_dashboard.html' %}
+{% block title %}Hospital Camps{% endblock %}
+{% block user %}Completed Hospital Camps{% endblock %}
+{% block content %}
+<div class="container">
+   <h2>Finished Camps</h2>
+   <table class="table table-striped table-bordered">
+       <thead class="table-dark">
+           <tr>
+               <th scope="col">Camp Name</th>
+               <th scope="col">Date</th>
+           </tr>
+       </thead>
+       <tbody>
+           {% for camp in camps %}
+           <tr>
+               <td>{{ camp[0] }}</td>
+               <td>{{ camp[1] }}</td>
+           </tr>
+           {% endfor %}
+       </tbody>
+   </table>
+</div>
+{% endblock %}

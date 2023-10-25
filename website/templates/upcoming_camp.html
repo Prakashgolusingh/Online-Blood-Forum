@@ -1,0 +1,35 @@
+{% extends 'hospital_dashboard.html' %}
+{% block title %}Upcoming Camps{% endblock %}
+{% block user %}Upcoming Camps{% endblock %}
+{% block content %}
+<div class="container">
+    <h2>Upcoming Camps</h2>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Location</th>
+                <th>Date</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for camp in camps %}
+            <tr>
+                <td>{{ camp[2] }}</td>
+                <td>{{ camp[3] }}</td>
+                <td>{{ camp[4] }}</td>
+                <td>
+                    <a href="{{ url_for('view.registeredDonor', camp_id=camp[0]) }}" class="btn btn-info">
+                        View Donors
+                    </a>
+                    <a href="{{ url_for('view.deleteCamp', camp_id=camp[0]) }}" class="btn btn-danger">
+                        Delete
+                    </a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}

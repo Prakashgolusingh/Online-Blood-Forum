@@ -1,0 +1,35 @@
+{% extends 'admin_dashboard.html' %}
+
+{% block content %}
+  <div class="container">
+    <h2 class="mt-4">List of Registered Hospitals</h2>
+    <table class="table table-striped mt-4">
+      <thead>
+        <tr>
+          <th scope="col">Name</th>
+          <th scope="col">Email</th>
+          <th scope="col">License Number</th>
+          <th scope="col">State</th>
+          <th scope="col">District</th>
+          <th scope="col">Contact</th>
+          <th scope="col">Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for hospital in hospitals %}
+          <tr>
+            <td>{{ hospital[1]}}</td>
+            <td>{{ hospital[0]}}</td>
+            <td>{{ hospital[2]}}</td>
+            <td>{{ hospital[4]}}</td>
+            <td>{{ hospital[3]}}</td>
+            <td>{{ hospital[5] }}</td>
+            <td>
+              <a href="{{ url_for('view.deleteHospital', email=hospital[0]) }}" class="btn btn-danger">Delete</a>
+            </td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+{% endblock %}

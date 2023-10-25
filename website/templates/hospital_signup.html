@@ -1,0 +1,21 @@
+{% extends 'donor_signup.html' %}
+{% block title%} Hospital Login {% endblock%}
+{%block signup%}Hospital Sign Up{%endblock%}
+{% block info%} 
+<label for="name" class="form-label"><strong>Hospital Name</strong></label>
+<input
+    type="text"
+    class="form-control"
+    id="name"
+    name="name"
+    placeholder="Enter Hospital Name"
+/>
+<label for="licenseNo" class="form-label"><strong>License Number</strong></label>
+<input
+    type="text"
+    class="form-control"
+    id="licenseNo"
+    name="licenseNo"
+    placeholder="Enter License Number"
+/>
+{% endblock%}

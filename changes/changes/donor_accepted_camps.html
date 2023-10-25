@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% block title %}Donor Home Page{% endblock%}
+{% block user %}Donor Dashboard{% endblock %}
+{% block navbar %}
+
+{% include 'donor_navbar.html' %}
+
+<div class="container mt-5">
+    <h2>Accepted Camp Registrations</h2><br>
+    <table class="table table-bordered table-hover">
+        <thead class="thead-dark">
+            <tr>
+                <th>Camp Name</th>
+                <th>Camp Date</th>
+                <th>Hospital Name</th>
+                <th>Contact Number</th>
+                <th>State</th>
+                <th>District</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in data %}
+            <tr>
+                <td>{{row[0]}}</td>
+                <td>{{row[1]}}</td>
+                <td>{{row[2]}}</td>
+                <td>{{row[3]}}</td>
+                <td>{{row[4]}}</td>
+                <td>{{row[5]}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+
+{% endblock %}

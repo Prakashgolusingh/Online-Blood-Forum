@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+{% block title %}Donor Home Page{% endblock%}
+{% block user %}Donor Dashboard{% endblock %}
+{% block navbar %}
+
+{% include 'donor_navbar.html' %}
+
+
+<div class="container mt-5">
+    <h2>My Past Camps</h2>
+    <table class="table table-bordered table-hover">
+        <thead class="thead-dark">
+            <tr>
+                <th>Camp Name</th>
+                <th>Camp Date</th>
+                <th>Hospital Name</th>
+                <th>State</th>
+                <th>District</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in rows %}
+            <tr>
+                <td>{{row[0]}}</td>
+                <td>{{row[1]}}</td>
+                <td>{{row[2]}}</td>
+                <td>{{row[3]}}</td>
+                <td>{{row[4]}}</td>
+                {% if row[5] == 'Accepted' %}
+                <td><span class="status-accepted">Accepted</span></td>
+                {% elif row[5] == 'Rejected' %}
+                <td><span class="status-rejected">Rejected</span></td>
+                {% else %}
+                <td><span class="status-no-response">No Response</span></td>
+                {% endif %}
+            </tr>
+            {% endfor %}
+            <!-- Add more rows as needed -->
+        </tbody>
+    </table>
+</div>
+
+<style>
+    .status-accepted {
+        color: #fff;
+        background-color: green;
+        padding: 5px 10px;
+        border-radius: 5px;
+    }
+    
+    .status-rejected {
+        color: #fff;
+        background-color: red;
+        padding: 5px 10px;
+        border-radius: 5px;
+    }
+
+    .status-no-response {
+        color: #000;
+        background-color: yellow;
+        padding: 5px 10px;
+        border-radius: 5px;
+    }
+</style>
+
+
+{% endblock %}
