@@ -42,4 +42,4 @@ number. Admin can delete account of any donors or hospitals if it finds any thin
 3. GUI are not much fancy, it is simple and mostly bootstrap are used, since the main aim to work on backend.
 
 ## Note-
-This is my first 3rd project in flask and the best one till the date.
+This is my first 3rd project in flask and the best one till date.
