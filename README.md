@@ -37,10 +37,11 @@ by filling a form with some information about camp like date, place, etc.
 number. Admin can delete account of any donors or hospitals if it finds any thing suspicious.
 
 ## About techology and application
-1. create using flask and sqlite (sqlite is provided by flask itself) so need to add any other database.
+1. create using flask and sqlite (sqlite is provided by flask itself) so no need to add any other database until you don't want to use sqlite.
 2. Total 6 table are their in this application.
 3. GUI are not much fancy, it is simple and mostly bootstrap are used, since the main aim to work on backend.
 
 ## Note-
-This is my first 3rd project in flask and the best one till date. But i personlly love this project cause i learned alot while working on it
-learning new technology or working on product which can be used by people gives me happiness.
+--> This is my 3rd project in flask and the best one till date. But i personlly love this project cause i learned alot while working on it
+--> learning new technology or working on product which can be used by people gives us different felling.
+--> NOt copied from somewhere.
