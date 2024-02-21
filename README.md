@@ -1,4 +1,5 @@
 # Online-Blood-Forum
+This project is a part of Semester-5 DBMS lab
 The Online Blood Forum Project is a pioneering initiative driven by the vision to bridge 
 the gap between blood donors and those in need of it by connecting them to the hospitals in their area.
 
