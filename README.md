@@ -21,7 +21,7 @@ by filling a form with some information about camp like date, place, etc.
 
 6. Hospital can view the list of registered donors in camp with donors details.
 7. Hospitals have choise to accept/reject registered donors
-8. if reject donors delted from list and can't register again in that camp.
+8. if reject donors deleted from list and can't register again in that camp.
 9. If accepted, 1 unit of blood will increase in that hospital available blood bank of same blood group that of donor.
 10. They can view history of organized blood camp with their registered donors.
 
