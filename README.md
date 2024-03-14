@@ -29,7 +29,9 @@ by filling a form with some information about camp like date, place, etc.
 1. Donors can create their account base name, state, district, contact number, etc.
 2. They can also search for blood in nearby hospitals.
 3. They can register in blood donation camp if they are eligible(like they have not registered in any camp in last 4 months).
-4. They can update their profile's basic information.  
+4. They can update their profile's basic information.
+5. They can check if donor already applied for any camp and it's not accepted/reject till now.
+6. They can see all past camps in which donor participated with status of accepted or rejected in that camp.
 
 ## ● Admin– 
 1. Admin can't register by itself, but only by developers.
